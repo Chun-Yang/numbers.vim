@@ -101,8 +101,6 @@ function! NumbersEnable()
     :set relativenumber
     augroup enable
         au!
-        autocmd InsertEnter * :call SetNumbers()
-        autocmd InsertLeave * :call SetRelative()
         autocmd BufNewFile  * :call ResetNumbers()
         autocmd BufReadPost * :call ResetNumbers()
         autocmd FocusLost   * :call Uncenter()
